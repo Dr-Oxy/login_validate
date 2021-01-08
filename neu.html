@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuophormism</title>
+    <link rel="stylesheet" href="neu.css" />
+    <script src="https://use.fontawesome.com/1d04fc5f72.js"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="text">
+        <h3>Welcome,</h3>
+        <h1>Chioma Otu &#128075;</h1>
+      </div>
+
+      <div id="outer" class="outerCircle">
+        <div class="profilePic"></div>
+      </div>
+
+      <p class="successNote display-none">Login Successful &#9989;</p>
+
+      <form class="form" action="#">
+        <div class="username">
+          <i class="fa fa-user"></i>
+          <input type="text" name="" id="user" placeholder="Username" />
+        </div>
+
+        <div class="password">
+          <i class="fa fa-key"></i>
+          <input type="password" name="" id="pass" placeholder="Password" />
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Login" onclick="validate()" />
+        </div>
+
+        <div class="links">
+          <a href="#">Forgot password? |</a>
+          <a href="#">Sign Up</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validate() {
+        let userName = document.getElementById("user").value;
+        let password = document.getElementById("pass").value;
+
+        if (userName == "dr-oxy" && password == "otu") {
+          document.querySelector(".form").style.display = "none";
+          document.querySelector(".successNote").style.display = "block";
+          document.querySelector(".outerCircle").style.border =
+            "thick dotted green";
+        } else {
+          alert("Login failed!! Check username and password");
+        }
+      }
+    </script>
+  </body>
+</html>
